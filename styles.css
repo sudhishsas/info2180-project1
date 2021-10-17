@@ -1,11 +1,157 @@
 /* Add your CSS to this file */
 body {
-    margin: 0;
+    margin: 0px;
+    padding: 10px;
     font-size: 16px;
+    display: grid;
+    grid-template-rows: 2% 97% 2%;
+    grid-template-columns: auto;
+    grid-template-areas: 
+                        'header'
+                        'main'
+                        'footer';
 }
 
-.container {
-    margin: 0 auto;
+header{
+    margin: 150px;
+    padding: 0px;
+    align-content: center;
+    
+}
+
+header .container{
+    padding: 0px;
+    margin: 0px;
     max-width: 960px;
     width: 100%;
+    position: static;
+    float: left;
+    
+    background-color: white ;
+    
+}
+header h1 {
+    float: left;
+    padding: 0px;
+    margin: 0px;
+}
+header nav{
+    float: right;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+;
+}
+
+li{
+   float: left;
+}
+li a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+  
+li a:hover {
+    background-color: #111111;
+  }
+
+main{
+    padding: 0px;
+    margin: 100px;
+    display: grid;
+    grid-area: 
+                'overview-hero'
+                'learn-about'
+                'testing'
+                'stories'
+                'newsletter';
+    
+}
+main .overview-hero{
+    padding: 20px;
+    margin: 20px;
+    background-color: #aaa;
+    
+}
+main .overview-hero .container {
+    padding: 10px;
+    margin: 10px;
+    
+}
+.overview-hero .container .overview-hero-image img{
+    width: 200px;
+    margin: 0px;
+    padding: 10px;
+    float: left;
+}
+
+.overview-hero .container .overview-hero-text{
+    padding: 20px;
+    margin: 10px;
+
+}
+main{
+    margin: 100px;
+    padding: 30px;
+}
+main .learn-about{
+    padding: 0px;
+    margin: 0px;
+    align-content: center;
+}
+
+main .learn-about .conatiner{
+    margin: 0px;
+    padding: 0px;
+
+    align-content: center;
+   
+}
+main .learn-about .container h2{
+    margin: 0px;
+    padding: 0px;
+}
+main .learn-about .card
+{
+    float: left;
+    width: 25%;
+    padding: 60px;
+}
+
+main .learn-about .card-body{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0);
+    padding: 70px;
+    margin: 0px;
+    text-align: center; 
+}
+.testing{
+    margin: 0px;
+    padding: 0px;
+    background-color: grey;
+}
+main .testing .container{
+    padding: 0px;   
+    margin: 0px;
+    align-content: center;
+    
+}
+
+main .testing .container .testing-desciption{
+    
+    margin: 0px;
+    padding: 20px;
+    float: left;
+}
+main .testing .container .cta{
+    float: right; 
+    margin: 100px; 
+}
+
+footer{
+    background-color: royalblue;
 }
