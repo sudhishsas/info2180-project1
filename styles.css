@@ -1,10 +1,12 @@
 /* Add your CSS to this file */
 body {
+    position: static;
     margin: 0px;
-    padding: 10px;
-    font-size: 16px;
+    padding: 0px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: grid;
-    grid-template-rows: 2% 97% 2%;
+    grid-template-rows: 5% 93% 2%;
     grid-template-columns: auto;
     grid-template-areas: 
                         'header'
@@ -13,37 +15,44 @@ body {
 }
 
 header{
-    margin: 150px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px;
     padding: 0px;
+    padding-left: 400px;
     align-content: center;
-    
 }
 
 header .container{
     padding: 0px;
     margin: 0px;
-    max-width: 960px;
+    max-width: 990px;
     width: 100%;
     position: static;
-    float: left;
-    
+    padding-top: 80px;
     background-color: white ;
     
 }
 header h1 {
-    float: left;
     padding: 0px;
     margin: 0px;
+    float: left;
+    font-size: 18px;
 }
 header nav{
-    float: right;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0px; 
 }
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-;
+    float: right;
+    
 }
 
 li{
@@ -52,17 +61,23 @@ li{
 li a {
     display: block;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     text-decoration: none;
+    color: #6b7280;
+    font-size: 18px;
   }
   
 li a:hover {
-    background-color: #111111;
+    background-color: #5A67D8;
   }
 
 main{
     padding: 0px;
-    margin: 100px;
+    margin: 0px;
+    
+    height: 95%;
+    width: 20%;
+    grid-template-rows: 250px;
     display: grid;
     grid-area: 
                 'overview-hero'
@@ -70,88 +85,230 @@ main{
                 'testing'
                 'stories'
                 'newsletter';
-    
+    grid-template-rows: 12% 32% 12% 34% 16%;
 }
 main .overview-hero{
+
     padding: 20px;
-    margin: 20px;
-    background-color: #aaa;
-    
+    margin: 0px;
+    width: 100%;
+    background-color: #E2E8F0;
 }
 main .overview-hero .container {
     padding: 10px;
-    margin: 10px;
-    
+    margin: 10px;  
+    display: grid;
+    grid-area: 
+                'overview-hero-image overview-hero text';
+    grid-template-columns:  40% 32% ;
 }
 .overview-hero .container .overview-hero-image img{
-    width: 200px;
+    width: 230px;
     margin: 0px;
     padding: 10px;
-    float: left;
+    padding-left: 460px;
 }
 
 .overview-hero .container .overview-hero-text{
-    padding: 20px;
-    margin: 10px;
-
-}
-main{
-    margin: 100px;
-    padding: 30px;
-}
-main .learn-about{
+    
     padding: 0px;
     margin: 0px;
-    align-content: center;
+    padding-left: 20px;
+
+}
+.overview-hero .container .overview-hero-text h2{
+    color: #49BB78;
+    font-size: 24px;
+}
+main{
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 0px;
+}
+main .learn-about{
+    align-self: center;
+    margin: 0px;
+    padding-left: 350px;
+    padding-right: 300px;
+    padding-bottom: 20px;
 }
 
 main .learn-about .conatiner{
     margin: 0px;
     padding: 0px;
-
-    align-content: center;
-   
+    justify-content: center;
 }
 main .learn-about .container h2{
     margin: 0px;
-    padding: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    text-align: left;
 }
-main .learn-about .card
+main .cards
 {
-    float: left;
-    width: 25%;
-    padding: 60px;
+    display: flex;
+    justify-content: center;
+    min-width: 10vh;
+    min-height: 65vh; 
+    margin: 0px;
+    padding-top: 10px;
 }
 
-main .learn-about .card-body{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0);
-    padding: 70px;
+main .card{
+    float: none;
+    margin-left: 10px;
+    box-shadow: 0 4px 8px 0 #E2E8F0;
     margin: 0px;
-    text-align: center; 
+    float: left;
+    margin: 10px;
+    border-radius: 5px;
+    
+}
+main .learn-about .container .card img{
+    padding: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+main .card-body{
+    text-align: center;
+    margin: 20px; 
+}
+main .card-body h3{
+    color: #48BB78;
+    font-size: 21px;
 }
 .testing{
     margin: 0px;
     padding: 0px;
-    background-color: grey;
+    padding-left: 390px;
+    width: 100%;
+    color: white;
+    background-color: #4A5568;
 }
 main .testing .container{
     padding: 0px;   
     margin: 0px;
-    align-content: center;
+    display: grid;
     
+    grid-area: 'testing-desciption cta';
+    grid-template-columns: 29% 10% ;
 }
 
 main .testing .container .testing-desciption{
-    
     margin: 0px;
-    padding: 20px;
-    float: left;
+    padding: 40px;
+    
+    text-align: left;
 }
 main .testing .container .cta{
-    float: right; 
-    margin: 100px; 
+    align-self: center;
+    background-color: #48BB78;
+    border: none;
+    color: white;
+    padding: 15px 2px;
+    margin: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+main .stories{
+    text-align: left;
+}
+main .stories .container{
+    margin: 100px;
+    padding-left: 320px;
+    padding-right: 300px;
+    
+}
+main .stories .container h2{
+    text-align: left;
+    color: #5A67D8;
+}
+main .stories .container img{
+    width: 180px;
+    height: 180px;
+    float: left;
+    border-radius: 50%;
+    padding: 20px;
+}
+main .stories .container article{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 0%;
+}
+main .stories .container article .article-body h3{
+    font-size: 18px;
+}
+main .stories .container article a{
+    color: #5A67D8;
+}
+main .newsletter{
+    width: 112%;
+    padding: 50px;
+    background-color: #48BB78;
+    color: white;
+    display: grid;
+    grid-area: 'container ';
+    grid-template-columns:  40.5%;
+    justify-content: center;
 }
 
+main .newsletter .container
+{
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 340px;
+}
+main .newsletter h3{
+    text-align: center;
+}
+main .newsletter p
+{
+    text-align: left;
+}
+main .newsletter .container form{
+    display: grid;
+    grid-area: 'form-group btn';
+    grid-template-columns: 60% 30%;
+}
+main .newsletter .container .form-group
+{
+    padding-left: 0px;
+    padding: 15px 12px;
+    
+}
+main .form-group input[type = email], selact{
+    width: 102%;
+    padding: 18px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+main .newsletter .container .btn
+{
+    align-self: center;
+    background-color: #5A67D8;
+    border: none;
+    color: white;
+    padding: 15px 12px;
+    margin: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+}
 footer{
-    background-color: royalblue;
+    padding-left: 300px;
+    background-color: #4A5568;
+    color: white;
 }
